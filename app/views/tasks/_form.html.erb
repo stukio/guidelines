@@ -5,6 +5,10 @@
     <%= f.input :content %>
   </div>
 
+   <div class="form-inputs">
+    <%= f.input :state, collection: ['to_do','doing','done'], include_blank: false %>
+  </div>
+
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
