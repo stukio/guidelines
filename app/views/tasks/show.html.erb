@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @task.content %>
-</p>
-
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<div class="text-center">
+	<h3><%= @task.content %></h3>
+	<p>Created <%= time_ago_in_words(@task.created_at) %> ago</p>
+	<p>State: <%= @task.state %></p>
+	<%= link_to 'Edit', edit_task_path(@task) %> <br>
+	<%= link_to 'Destroy', task_path(@task), method: :delete %>
+</div>
